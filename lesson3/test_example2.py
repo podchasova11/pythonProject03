@@ -5,8 +5,7 @@ from webdriver_manager.chrome import ChromeDriverManager
 
 
 class TestLoginPages: # Название тестового класса
-    @pytest.mark.smoke
-    @pytest.mark.regression
+
     def setup(self):
         self.service = Service(ChromeDriverManager().install())
         self.driver = webdriver.Chrome(service=self.service)
